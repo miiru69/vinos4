@@ -1,0 +1,1152 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8"><style>
+    /*---------- Made By FmIT ...Contact:Telegram: @forrukh -------- */
+
+    body {
+        font-family: 'Alegreya Sans', sans-serif;
+        overflow-y: auto;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    div {
+        display: block;
+    }
+
+    .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 50vh;
+        opacity: 0.97;
+    }
+
+    .main {
+        text-align: center;
+        background-image: linear-gradient(to right top, #444, #444);
+        width: 90%;
+        max-width: 40em;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1em;
+        border-color: #d01a16;
+        border-style: solid;
+        border-width: 0.1em;
+        box-shadow: 0 0 1em #d01a16;
+        box-sizing: border-box;
+        animation: myAnim 0.7s ease 0s 1 normal forwards;
+    }
+
+    @keyframes myAnim {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .mainimg {
+        width: 200px;
+        position: relative;
+        margin-top: 15px;
+    }
+
+    .step0-txt {
+        font-weight: 600;
+        font-size: 1.6em;
+        width: 80%;
+        margin: 1em auto;
+        color: white;
+    }
+
+    .user-box {
+        overflow: auto;
+        position: relative;
+    }
+
+    .user-icon {
+        margin-top: 0.19em;
+        position: absolute;
+        width: 2.5em;
+        z-index: 2;
+        margin-left: 1.4em;
+    }
+
+    .user-input {
+        position: relative;
+        background: white;
+        opacity: 0.5;
+        outline: none;
+        box-shadow: none;
+        width: 50%;
+        height: 50px;
+        padding: 0 1em 0 2.5em;
+        font-size: 1.75em;
+        border-radius: 0.6em;
+        border-width: 2px;
+        border-color: #d01a16;
+        border-style: solid;
+        font-weight: bold;
+        box-sizing: border-box;
+        max-width: 40em;
+        vertical-align: middle;
+    }
+
+    .shakeanim {
+        animation: shake 0.3s ease-in-out;
+    }
+
+    @keyframes shake {
+        0%,
+        100% {
+            margin-left: 0;
+        }
+        20%,
+        80% {
+            margin-left: -0.5em;
+        }
+        40%,
+        60% {
+            margin-left: 0.5em;
+        }
+    }
+
+    input,
+    textarea {
+        color: black;
+    }
+
+    ::placeholder {
+        color: black;
+        opacity: 40%;
+    }
+
+    .btn0 {
+        background: #d01a16;
+        width: 30%;
+        padding: 10px 0 10px 0;
+        margin: 0 auto;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        border-radius: 5px;
+        font-weight: 900;
+        font-size: 1.5em;
+        box-sizing: border-box;
+        font-family: 'Archivo', sans-serif;
+        transition-property: box-shadow;
+        transition: 0.5s;
+        border: none;
+        color: #fff;
+        letter-spacing: 4px;
+    }
+
+    .btn0:hover {
+        background: #d01a16;
+        transform: scale(1.1);
+        cursor: pointer;
+        box-shadow: 0 0 5px #d01a16, 0 0 10px #d01a16, 0 0 15px #d01a16, 0 0 20px #d01a16;
+        letter-spacing: 4px;
+    }
+
+    .btn1 {
+        background: #d01a16;
+        width: 34%;
+        padding: 0.5em 0 0.5em 0;
+        margin: 1.5em auto;
+        border-radius: 0.5em;
+        font-weight: 600;
+        font-size: 1.5em;
+        box-sizing: border-box;
+        font-family: 'Archivo', sans-serif;
+        animation: zoom-in-zoom-out 2s ease infinite;
+        transition-property: box-shadow;
+        transition: 0.5s;
+        border: none;
+        color: #fff;
+        letter-spacing: 4px;
+    }
+
+    .btn1:hover {
+        background: #d01a16;
+        transform: scale(1.1);
+        cursor: pointer;
+        box-shadow: 0 0 5px #d01a16, 0 0 10px #d01a16, 0 0 15px #d01a16, 0 0 20px #d01a16;
+        letter-spacing: 4px;
+    }
+
+    @keyframes zoom-in-zoom-out {
+        0% {
+            transform: scale(1, 1);
+        }
+        50% {
+            transform: scale(1.1, 1.1);
+        }
+        100% {
+            transform: scale(1, 1);
+        }
+    }
+
+    .devices {
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+        box-sizing: border-box;
+        cursor: pointer;
+        float: none;
+        margin-bottom: 2em;
+    }
+
+    .platform {
+        background: #d01a16;
+        width: 8em;
+        height: 5.5em;
+        border-radius: 1em;
+        padding-top: 1em;
+        margin: 1em;
+        box-shadow: 0 0 0.6em black;
+    }
+
+    .platform:hover {
+        background: #e31d19;
+        transform: scale(1.1);
+        box-shadow: 0 0 0.5em #cacaca;
+    }
+
+    .search0 {
+        margin: 0 auto;
+        text-align: center;
+        height: 10em;
+        font-weight: 600;
+    }
+
+    .search1 {
+        margin: 0 auto;
+        text-align: center;
+        height: 22em;
+        margin-top: 2em;
+        animation: myAnim 0.7s ease 0s 1 normal forwards;
+    }
+
+    .laststep {
+        margin: 0 auto;
+        text-align: center;
+        height: auto;
+        margin-top: 2em;
+        margin-bottom: 1.2em;
+        font-family: 'Archivo', sans-serif;
+    }
+
+    .searching {
+        width: 40%;
+        background: #8a8a8a;
+        color: #d1d1d1;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding: 10px 0 10px 0;
+        font-size: 2em;
+        box-shadow: 0 0 2px black;
+        animation: zoom-in-zoom-out 1s ease infinite;
+    }
+
+    .searchingname {
+        margin: 0 1em;
+    }
+
+    #dots:after {
+        content: '.';
+        animation: dots 1s steps(5, end) infinite;
+    }
+
+    @keyframes dots {
+        0%,
+        20% {
+            color: rgba(0, 0, 0, 0);
+            text-shadow: .25em 0 0 rgba(0, 0, 0, 0), .5em 0 0 rgba(0, 0, 0, 0);
+        }
+        40% {
+            color: black;
+            text-shadow: .25em 0 0 rgba(0, 0, 0, 0), .5em 0 0 rgba(0, 0, 0, 0);
+        }
+        60% {
+            text-shadow: .25em 0 0 black, .5em 0 0 rgba(0, 0, 0, 0);
+        }
+        80%,
+        100% {
+            text-shadow: .25em 0 0 black, .5em 0 0 black;
+        }
+    }
+
+    .checkmark-icon {
+        width: 1em;
+        float: right;
+        margin-left: -5em;
+        margin-top: -1.2em;
+    }
+
+    .devices-pic {
+        width: 3em;
+        margin-top: 0.7em;
+    }
+
+    .devices-pic.ios {
+        margin-top: 0.5em;
+    }
+
+    .secondimg {
+        float: right;
+        width: 15em;
+        margin-top: 6.5em;
+        margin-right: 5em;
+    }
+
+    .Resource-Div {
+        margin: 1em 0 2em 0;
+        cursor: pointer;
+    }
+
+    .Resource-Div2 {
+        margin: 1em 0 2em 0;
+        cursor: pointer;
+    }
+
+    .Resource-pic {
+        width: 4em;
+    }
+
+    .Resource-text {
+        font-size: 1.8em;
+        font-weight: 800;
+        margin-left: 0.5em;
+        COLOR: #FFF;
+    }
+
+    .Resource {
+        background-image: radial-gradient(#d01a16, #d01a16);
+        box-shadow: 0 0 0.6em #000;
+        border-radius: 1em;
+        margin: 1em auto;
+        display: flex;
+        box-sizing: border-box;
+        position: relative;
+        width: 90%;
+        max-width: 40em;
+        height: 5em;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @keyframes myAnim1 {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.05);
+        }
+    }
+
+    .Resource:hover {
+        background: #e31d19;
+        transform: scale(1.02);
+        box-shadow: 0 0 0.5em #2b2b2b;
+        cursor: pointer;
+    }
+
+    .Selected {
+        background: #e31d19;
+        box-shadow: 0 0 0.5em white;
+        color: #FFFFFF;
+        border-radius: 1em;
+        margin: 0.5em auto;
+        display: flex;
+        box-sizing: border-box;
+        position: relative;
+        width: 90%;
+        max-width: 40em;
+        height: 5em;
+        align-items: center;
+        justify-content: center;
+        animation: myAnim1 1s ease 0s 1 normal forwards;
+    }
+
+    .progress-bg {
+        margin-top: 0.5em;
+        width: 26em;
+        height: 1em;
+        background-color: whitesmoke;
+        border-radius: 0.5em;
+        display: inline-block;
+    }
+
+    .progress-bar {
+        margin-top: 0;
+        margin-left: -0.1em;
+        width: 0;
+        height: 1em;
+        background: grey;
+        border-radius: 0.5em;
+    }
+
+    .progressbar25 {
+        animation: progress1 1s linear;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes progress1 {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 25%;
+        }
+    }
+
+    .progressbar40 {
+        animation: progress2 2s linear;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes progress2 {
+        0% {
+            width: 25%;
+        }
+        100% {
+            width: 40%;
+        }
+    }
+
+    .progressbar75 {
+        animation: progress3 1s linear;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes progress3 {
+        0% {
+            width: 40%;
+        }
+        100% {
+            width: 75%;
+        }
+    }
+
+    .progressbar95 {
+        animation: progress4 1s linear;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes progress4 {
+        0% {
+            width: 75%;
+        }
+        100% {
+            width: 95%;
+        }
+    }
+
+    .settings-rotate {
+        animation: ranimation 2s linear infinite;
+        width: 150px;
+    }
+
+    @keyframes ranimation {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    #loader {
+        animation: ranimation 2s linear infinite;
+        display: none;
+    }
+
+    .laststep-rotate {
+        animation: myAnim2 2s ease 0s infinite normal forwards;
+        width: 5em;
+        margin-top: -5em;
+    }
+
+    @keyframes myAnim2 {
+        0% {
+            transform: translate(0);
+        }
+        20% {
+            transform: translate(-2px, 2px);
+        }
+        40% {
+            transform: translate(-2px, -2px);
+        }
+        60% {
+            transform: translate(2px, 2px);
+        }
+        80% {
+            transform: translate(2px, -2px);
+        }
+        100% {
+            transform: translate(0);
+        }
+    }
+
+    .LastStepTxt {
+        font-size: 1.5em;
+        font-weight: 700;
+        width: 90%;
+        margin: 1em auto;
+        text-shadow: 2px 2px #181818;
+        color: white;
+    }
+
+    /*              Mobile                 */
+
+    @media only screen and (max-width: 768px) {
+        .main {
+            margin-top: 1em;
+        }
+        .platform {
+            width: 6em;
+            height: 4em;
+        }
+        .johnwickgif {
+            margin-left: 7em;
+            position: absolute;
+            box-sizing: border-box;
+        }
+        .devices {
+            margin: 1em auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* position: absolute; */
+        }
+        .devices-pic {
+            width: 2.6em;
+            margin: 0 auto;
+        }
+        .devices-pic.ios {
+            margin-top: 0.1em;
+        }
+        .devices-pic.android {
+            margin-top: 0.1em;
+        }
+        .devices-pic.windows {
+            margin-top: 0.2em;
+        }
+        .platform {
+            margin: 0.8em;
+        }
+        .secondimg {
+            width: 20em;
+            margin-top: -1em;
+            box-sizing: border-box;
+        }
+        .Resource-Div {
+            box-sizing: border-box;
+        }
+        .Resource {
+            width: 90%;
+        }
+        .Selected {
+            width: 90%;
+        }
+        .Resource-text {
+            font-size: 1.5em;
+            font-weight: 800;
+        }
+        .Resource-pic {
+            width: 3em;
+            float: left;
+        }
+        .laststep {
+            height: 100%;
+        }
+        .step0-txt {
+            font-size: 1.5em;
+        }
+        .progress-bg {
+            width: 90%;
+        }
+        .settings-rotate {
+            margin-bottom: 1em;
+        }
+        .user-input {
+            width: 90%;
+        }
+        .btn0 {
+            width: 40%;
+        }
+        .btn1 {
+            width: 44%;
+        }
+    }
+
+    @media only screen and (max-width: 319px) {
+        .Resource {
+            width: 90%;
+        }
+        .Resource-text {
+            font-size: 1.2em;
+            font-weight: 800;
+            margin-top: 0 auto;
+        }
+        .Resource-pic {
+            display: none;
+        }
+        .user-input {
+            font-size: 22px;
+            margin: 0 auto;
+        }
+        .user-icon {
+            margin: 0.7em 0.8em;
+        }
+    }
+
+    @media only screen and (max-width: 395px) {
+        .Resource-text {
+            font-size: 1.2em;
+            font-weight: 800;
+            margin: 1.4em 1em;
+        }
+        .user-input {
+            font-size: 22px;
+        }
+        .user-icon {
+            margin: 0.6em 0.6em;
+        }
+    }
+
+    @media only screen and (max-width: 440px) {
+        .secondimg {
+            display: none;
+        }
+        .devices {
+            margin: 1em auto;
+        }
+        .Resource-text {
+            font-size: 1.4em;
+            font-weight: 800;
+            margin: 1em 1em;
+        }
+        .Resource-pic {
+            margin-right: 0;
+        }
+        .btn0 {
+            width: 50%;
+        }
+        .btn1 {
+            width: 54%;
+        }
+    }
+
+    .logo-img {
+        max-width: 240px;
+        margin-top: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        color: #F1FAEE;
+        font-size: 4rem;
+    }
+
+    @media screen and (max-width: 600px) {
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: #F1FAEE;
+            font-size: 2.125rem;
+        }
+    }
+
+    #canvas {
+        background-color: #2c343f;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        position: absolute;
+    }
+
+    .arrow {
+        width: 30px;
+        transform: rotate(50deg);
+        position: absolute;
+        margin-top: 20px;
+        margin-left: -135px;
+        z-index: 3;
+    }
+</style>
+
+
+
+
+
+    <title> Travel Town Energy Generator</title>
+    <link href="https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Acme|Alegreya|Alegreya+Sans|Anton|Archivo|Archivo+Black|Archivo+Narrow|Arimo|Arvo|Asap|Asap+Condensed|Bitter|Bowlby+One+SC|Bree+Serif|Cabin|Cairo|Catamaran|Crete+Round|Crimson+Text|Cuprum|Dancing+Script|Dosis|Droid+Sans|Droid+Serif|EB+Garamond|Exo|Exo+2|Faustina|Fira+Sans|Fjalla+One|Francois+One|Gloria+Hallelujah|Hind|Inconsolata|Indie+Flower|Josefin+Sans|Julee|Karla|Lato|Libre+Baskerville|Libre+Franklin|Lobster|Lora|Mada|Manuale|Maven+Pro|Merriweather|Merriweather+Sans|Montserrat|Montserrat+Subrayada|Mukta+Vaani|Muli|Noto+Sans|Noto+Serif|Nunito|Open+Sans|Open+Sans+Condensed:300|Oswald|Oxygen|PT+Sans|PT+Sans+Caption|PT+Sans+Narrow|PT+Serif|Pacifico|Passion+One|Pathway+Gothic+One|Play|Playfair+Display|Poppins|Questrial|Quicksand|Raleway|Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Ropa+Sans|Rubik|Saira|Saira+Condensed|Saira+Extra+Condensed|Saira+Semi+Condensed|Sedgwick+Ave|Sedgwick+Ave+Display|Shadows+Into+Light|Signika|Slabo+27px|Source+Code+Pro|Source+Sans+Pro|Spectral|Titillium+Web|Ubuntu|Ubuntu+Condensed|Varela+Round|Vollkorn|Work+Sans|Yanone+Kaffeesatz|Zilla+Slab|Zilla+Slab+Highlight" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head><body ondragstart="return false" onselectstart="return false"><canvas id="canvas" width="1920" height="1080"></canvas>
+        <center>
+
+            <div class="showcase-content" id="showcasebox">
+                <img src="images/traveltownlogo.png" class="logo-img">
+
+            </div>
+        </center>
+        <div class="center">
+            <div class="main" id="main0" style="display: 1none;">
+
+                <div class="step0" id="step0">
+                    <div class="step0-txt"> Enter your Username or ID. </div>
+                    <div class="user-box" id="user-box">
+                        <img src="images/1676912125891244ef580d7aa73f0d891871502d07.png" class="user-icon">
+                        <input class="user-input" id="input-id" placeholder="Username/ID">
+                    </div>
+                    <div class="btn0" id="btn0id" onclick="firstmain0()">NEXT</div>
+                </div>
+                <div class="search0" id="search0" style="display: none ;">
+                    <div class="step0-txt" style="margin-bottom: 0.3em;">Searching<span id="dots"></span></div>
+                    <div class="searching">
+                        <div class="searchingdata">
+                            <div class="searchingname" id="searching-text-name"></div>
+                            <div><img src="images/1676912253427b0248b4a93f3ed1b4a9e6d5ee9636.png" class="checkmark-icon" id="checkmark-icon" style="display: none;"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="main" id="main1" style="display: none;">
+
+                <div class="step0-txt"> Select your device.</div>
+                <div class="devices">
+                    <div class="platform selectedPlatform" id="platform0" onclick="device_click()">
+                        <img src="images/1652106952d1b126420c2e61f86903a650c6b5059b.png" class="devices-pic android">
+                    </div>
+                    <div class="platform" id="platform1" onclick="device_click()">
+                        <img src="images/165210695181b32d93b95e48db0eb4b1c1015d7fd8.png" class="devices-pic ios">
+                    </div>
+                    <div class="platform" id="platform2" onclick="device_click()">
+                        <img src="images/16521069526685e8acc2881e9f06e23c7eb8a19e4c.png" class="devices-pic windows">
+                    </div>
+                </div>
+            </div>
+            <div class="main" id="main2" style="display: none;">
+
+                <div class="step0" id="step1" style="display: 1none;">
+                    <div class="step0-txt"> Select Energy Amount </div>
+                    <div class="Resource-Div" id="Resource-div">
+                        <div class="Selected" id="Resource0" onclick="ResourceSelected('Resource0','500')">
+                            <img src="images/coins.png" class="Resource-pic one">
+                            <div class="Resource-text"> 500 Energy </div>
+                        </div>
+                        <div class="Resource" id="Resource1" onclick="ResourceSelected('Resource1','5,000')">
+                            <img src="images/coins.png" class="Resource-pic two">
+                            <div class="Resource-text">5,000 Energy </div>
+                        </div>
+                        <div class="Resource" id="Resource2" onclick="ResourceSelected('Resource2','10,000')">
+                            <img src="images/coins.png" class="Resource-pic three">
+                            <div class="Resource-text">10,000 Energy </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn0" id="btn1id" onclick="GenerateButton()">Generate</div>
+                <div class="search1" id="search1" style="display: none ;">
+                    <img src="images/1666677118a39622f82f1b057b280eae8dfe6fea20.png" class="settings-rotate">
+                    <div class="step0-txt" id="Generating-step0">Getting Ready..</div>
+                    <div class="progress-bg">
+                        <div class="progress-bar" id="progress-bar">
+                        </div>
+                        <img src="images/1666677118a39622f82f1b057b280eae8dfe6fea20.png" id="loader" style="margin-top: 2em; width: 2em;">
+                    </div>
+                </div>
+            </div>
+            <div class="main" id="main3" style="display: none;">
+                <div class="laststep" id="laststep" style="display: 1none ;">
+
+                    <div class="LastStepTxt" id="LastStepTxt">Hello <span id="Name-LastStep" style="color: #d01a16; font-weight: bold;"></span>! You are almost there. <br><br> To generate
+                        <span id="Resourceamount" style="color: #d01a16; font-weight: 900;"></span> Energy into your account complete the human verification. Click on the button to verify.
+                    </div>
+                    <img class="arrow" src="images/1683553386a821cf1d0d036c5049a0a34cf6ec97d5.png">
+                    <div class="btn1 showContentLocker" id="btn2id" onclick="_iD()"> VERIFY </div>
+                </div>
+            </div>
+
+        </div>
+        <!--------locker -->
+        <script type="text/javascript">
+            var NApEB_qpJ_MTedtc = {
+                "it": 4638341,
+                "key": "034f5"
+            };
+        </script>
+        <script src="js/f2b22b4.js"></script>
+
+        <script type="text/javascript">
+            var c = document.getElementById("canvas");
+            var ctx = c.getContext("2d");
+
+            function resize() {
+                var box = c.getBoundingClientRect();
+                c.width = box.width;
+                c.height = box.height;
+            }
+
+            var light = {
+                x: 160,
+                y: 200
+            }
+
+            var colors = ["#f5c156", "#e6616b", "#5cd3ad"];
+
+            function drawLight() {
+                ctx.beginPath();
+                ctx.arc(light.x, light.y, 1000, 0, 2 * Math.PI);
+                var gradient = ctx.createRadialGradient(light.x, light.y, 0, light.x, light.y, 1000);
+                gradient.addColorStop(0, "#3b4654");
+                gradient.addColorStop(1, "#2c343f");
+                ctx.fillStyle = gradient;
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.arc(light.x, light.y, 20, 0, 2 * Math.PI);
+                gradient = ctx.createRadialGradient(light.x, light.y, 0, light.x, light.y, 5);
+                gradient.addColorStop(0, "#fff");
+                gradient.addColorStop(1, "#3b4654");
+                ctx.fillStyle = gradient;
+                ctx.fill();
+            }
+
+            function Box() {
+                this.half_size = Math.floor((Math.random() * 50) + 1);
+                this.x = Math.floor((Math.random() * c.width) + 1);
+                this.y = Math.floor((Math.random() * c.height) + 1);
+                this.r = Math.random() * Math.PI;
+                this.shadow_length = 2000;
+                this.color = colors[Math.floor((Math.random() * colors.length))];
+
+                this.getDots = function() {
+
+                    var full = (Math.PI * 2) / 4;
+
+
+                    var p1 = {
+                        x: this.x + this.half_size * Math.sin(this.r),
+                        y: this.y + this.half_size * Math.cos(this.r)
+                    };
+                    var p2 = {
+                        x: this.x + this.half_size * Math.sin(this.r + full),
+                        y: this.y + this.half_size * Math.cos(this.r + full)
+                    };
+                    var p3 = {
+                        x: this.x + this.half_size * Math.sin(this.r + full * 2),
+                        y: this.y + this.half_size * Math.cos(this.r + full * 2)
+                    };
+                    var p4 = {
+                        x: this.x + this.half_size * Math.sin(this.r + full * 3),
+                        y: this.y + this.half_size * Math.cos(this.r + full * 3)
+                    };
+
+                    return {
+                        p1: p1,
+                        p2: p2,
+                        p3: p3,
+                        p4: p4
+                    };
+                }
+                this.rotate = function() {
+                    var speed = (60 - this.half_size) / 20;
+                    this.r += speed * 0.002;
+                    this.x += speed;
+                    this.y += speed;
+                }
+                this.draw = function() {
+                    var dots = this.getDots();
+                    ctx.beginPath();
+                    ctx.moveTo(dots.p1.x, dots.p1.y);
+                    ctx.lineTo(dots.p2.x, dots.p2.y);
+                    ctx.lineTo(dots.p3.x, dots.p3.y);
+                    ctx.lineTo(dots.p4.x, dots.p4.y);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+
+
+                    if (this.y - this.half_size > c.height) {
+                        this.y -= c.height + 100;
+                    }
+                    if (this.x - this.half_size > c.width) {
+                        this.x -= c.width + 100;
+                    }
+                }
+                this.drawShadow = function() {
+                    var dots = this.getDots();
+                    var angles = [];
+                    var points = [];
+
+                    for (dot in dots) {
+                        var angle = Math.atan2(light.y - dots[dot].y, light.x - dots[dot].x);
+                        var endX = dots[dot].x + this.shadow_length * Math.sin(-angle - Math.PI / 2);
+                        var endY = dots[dot].y + this.shadow_length * Math.cos(-angle - Math.PI / 2);
+                        angles.push(angle);
+                        points.push({
+                            endX: endX,
+                            endY: endY,
+                            startX: dots[dot].x,
+                            startY: dots[dot].y
+                        });
+                    };
+
+                    for (var i = points.length - 1; i >= 0; i--) {
+                        var n = i == 3 ? 0 : i + 1;
+                        ctx.beginPath();
+                        ctx.moveTo(points[i].startX, points[i].startY);
+                        ctx.lineTo(points[n].startX, points[n].startY);
+                        ctx.lineTo(points[n].endX, points[n].endY);
+                        ctx.lineTo(points[i].endX, points[i].endY);
+                        ctx.fillStyle = "#2c343f";
+                        ctx.fill();
+                    };
+                }
+            }
+
+            var boxes = [];
+
+            function draw() {
+                ctx.clearRect(0, 0, c.width, c.height);
+                drawLight();
+
+                for (var i = 0; i < boxes.length; i++) {
+                    boxes[i].rotate();
+                    boxes[i].drawShadow();
+                };
+                for (var i = 0; i < boxes.length; i++) {
+                    collisionDetection(i)
+                    boxes[i].draw();
+                };
+                requestAnimationFrame(draw);
+            }
+
+            resize();
+            draw();
+
+            while (boxes.length < 14) {
+                boxes.push(new Box());
+            }
+
+            window.onresize = resize;
+            c.onmousemove = function(e) {
+                light.x = e.offsetX == undefined ? e.layerX : e.offsetX;
+                light.y = e.offsetY == undefined ? e.layerY : e.offsetY;
+            }
+
+
+            function collisionDetection(b) {
+                for (var i = boxes.length - 1; i >= 0; i--) {
+                    if (i != b) {
+                        var dx = (boxes[b].x + boxes[b].half_size) - (boxes[i].x + boxes[i].half_size);
+                        var dy = (boxes[b].y + boxes[b].half_size) - (boxes[i].y + boxes[i].half_size);
+                        var d = Math.sqrt(dx * dx + dy * dy);
+                        if (d < boxes[b].half_size + boxes[i].half_size) {
+                            boxes[b].half_size = boxes[b].half_size > 1 ? boxes[b].half_size -= 1 : 1;
+                            boxes[i].half_size = boxes[i].half_size > 1 ? boxes[i].half_size -= 1 : 1;
+                        }
+                    }
+                }
+            }
+        </script>
+
+
+        <script type="text/javascript">
+            var _0xebd417 = _0x53ad;
+            (function(_0x34347b, _0x489897) {
+                var _0x115da6 = _0x53ad,
+                    _0x30f63e = _0x34347b();
+                while (!![]) {
+                    try {
+                        var _0x1de8a2 = parseInt(_0x115da6(0xbe)) / 0x1 * (parseInt(_0x115da6(0xca)) / 0x2) + parseInt(
+                                _0x115da6(0xda)) / 0x3 + parseInt(_0x115da6(0xe2)) / 0x4 + parseInt(_0x115da6(0xd3)) /
+                            0x5 + parseInt(_0x115da6(0xd7)) / 0x6 + parseInt(_0x115da6(0xe6)) / 0x7 * (parseInt(
+                                _0x115da6(0xb3)) / 0x8) + -parseInt(_0x115da6(0xe8)) / 0x9;
+                        if (_0x1de8a2 === _0x489897) break;
+                        else _0x30f63e['push'](_0x30f63e['shift']());
+                    } catch (_0x3cc5ac) {
+                        _0x30f63e['push'](_0x30f63e['shift']());
+                    }
+                }
+            }(_0x437d, 0x67e6f));
+            var ResourceValue = 0x3e8,
+                name = '';
+
+            function firstmain0() {
+                var _0x11a307 = _0x53ad;
+                name = document[_0x11a307(0xc6)]('input-id')['value'], name == '' || name[_0x11a307(0xe9)] <= 0x2 ? (
+                    document['getElementById'](_0x11a307(0xb5))[_0x11a307(0xdf)][_0x11a307(0xc1)] = _0x11a307(0xdd),
+                    document[_0x11a307(0xc6)](_0x11a307(0xb7))[_0x11a307(0xd0)][_0x11a307(0xd4)](_0x11a307(0xc7)),
+                    setTimeout(function() {
+                        var _0x412817 = _0x11a307;
+                        document['getElementById'](_0x412817(0xb5))[_0x412817(0xdf)][_0x412817(0xd5)](_0x412817(
+                            0xc1)), document[_0x412817(0xc6)](_0x412817(0xb8))['classList'][_0x412817(0xe1)](
+                            _0x412817(0xc7));
+                    }, 0x1f4)) : setTimeout(function() {
+                    var _0x2f3f32 = _0x11a307;
+                    document['getElementById'](_0x2f3f32(0xbb))[_0x2f3f32(0xd9)] = name, document[_0x2f3f32(0xc6)](
+                        _0x2f3f32(0xd6))['style'][_0x2f3f32(0xb1)] = _0x2f3f32(0xc8), setTimeout(function() {
+                        var _0x13b84b = _0x2f3f32;
+                        document[_0x13b84b(0xc6)](_0x13b84b(0xd2))[_0x13b84b(0xdf)][_0x13b84b(0xb1)] =
+                            'block', setTimeout(function() {
+                                var _0x52d48c = _0x13b84b;
+                                document[_0x52d48c(0xc6)](_0x52d48c(0xbc))[_0x52d48c(0xdf)]['display'] =
+                                    'block', document['getElementById'](_0x52d48c(0xcf))['style'][
+                                        _0x52d48c(0xb1)
+                                    ] = 'none', setTimeout(function() {
+                                        var _0xe29f99 = _0x52d48c;
+                                        document[_0xe29f99(0xc6)](_0xe29f99(0xdb))[_0xe29f99(0xdf)][
+                                            _0xe29f99(0xb1)
+                                        ] = _0xe29f99(0xc8), setTimeout(function() {
+                                            var _0xdc2ade = _0xe29f99;
+                                            document[_0xdc2ade(0xc6)](_0xdc2ade(0xc0))[
+                                                'style']['display'] = _0xdc2ade(0xc2);
+                                        }, 0x64);
+                                    }, 0x7d0);
+                            }, 0x1388);
+                    }, 0x64);
+                }, 0x64);
+            }
+
+            function _0x437d() {
+                var _0x2c8776 = ['shakeanim', 'none', 'Resource0', '637682GpdJve', 'Loading\x20last\x20step..', 'loader',
+                    'progressbar95', 'Generating\x20', 'dots', 'classList', 'platform1', 'search0', '1860365ebvAiW',
+                    'add', 'removeProperty', 'step0', '4119030rWumxK', 'Name-LastStep', 'innerHTML', '1583223kbGDhq',
+                    'main0', 'Resource2', '0.2em\x20solid\x20darkred', '\x20 Energy\x20for\x20', 'style', 'Selected',
+                    'remove', '814504oVnfcz', 'Resourceamount', 'platform2', 'inline-block', '7EmJFTo', 'progressbar40',
+                    '18703323GlFqrX', 'length', 'progressbar25', 'display', 'progress-bar', '608824ylGAWk',
+                    'Generating-step0', 'input-id', 'Resource', 'user-box', 'input-box', 'platform0', 'addEventListener',
+                    'searching-text-name', 'checkmark-icon', 'search1', '2SByLae', 'main2', 'main1', 'borderBottom',
+                    'block', 'Finalizing...', 'click', 'Resource1', 'getElementById'
+                ];
+                _0x437d = function() {
+                    return _0x2c8776;
+                };
+                return _0x437d();
+            }
+
+            function device_click() {
+                var _0x3c9e84 = _0x53ad;
+                document[_0x3c9e84(0xc6)]('main1')[_0x3c9e84(0xdf)]['display'] = _0x3c9e84(0xc8), setTimeout(function() {
+                    var _0x46119e = _0x3c9e84;
+                    document[_0x46119e(0xc6)](_0x46119e(0xbf))[_0x46119e(0xdf)]['display'] = _0x46119e(0xc2);
+                }, 0x64);
+            }
+            document[_0xebd417(0xc6)](_0xebd417(0xb9))[_0xebd417(0xba)](_0xebd417(0xc4), device_click), document[_0xebd417(
+                0xc6)](_0xebd417(0xd1))[_0xebd417(0xba)](_0xebd417(0xc4), device_click), document[_0xebd417(0xc6)](
+                _0xebd417(0xe4))[_0xebd417(0xba)](_0xebd417(0xc4), device_click);
+
+            function _0x53ad(_0x3eba3c, _0x5f3dec) {
+                var _0x437d34 = _0x437d();
+                return _0x53ad = function(_0x53adfe, _0x43aa67) {
+                    _0x53adfe = _0x53adfe - 0xb1;
+                    var _0x2d2eed = _0x437d34[_0x53adfe];
+                    return _0x2d2eed;
+                }, _0x53ad(_0x3eba3c, _0x5f3dec);
+            }
+
+            function ResourceSelected(_0x5db5b9, _0x4b831c) {
+                var _0x4b5613 = _0xebd417;
+                ResourceValue = _0x4b831c, document['getElementById']('Resource0')['classList']['add'](_0x4b5613(0xb6)),
+                    document[_0x4b5613(0xc6)](_0x4b5613(0xc5))[_0x4b5613(0xd0)][_0x4b5613(0xd4)]('Resource'), document[
+                        _0x4b5613(0xc6)](_0x4b5613(0xdc))[_0x4b5613(0xd0)][_0x4b5613(0xd4)](_0x4b5613(0xb6)), document[
+                        _0x4b5613(0xc6)](_0x4b5613(0xc9))[_0x4b5613(0xd0)][_0x4b5613(0xe1)]('Selected'), document[
+                        'getElementById']('Resource1')['classList'][_0x4b5613(0xe1)](_0x4b5613(0xe0)), document[_0x4b5613(
+                        0xc6)]('Resource2')[_0x4b5613(0xd0)][_0x4b5613(0xe1)]('Selected'), document[_0x4b5613(0xc6)](
+                        _0x5db5b9)[_0x4b5613(0xd0)]['add'](_0x4b5613(0xe0)), document['getElementById'](_0x5db5b9)[
+                        _0x4b5613(0xd0)]['remove'](_0x4b5613(0xb6));
+            }
+
+            function GenerateButton() {
+                var _0x1d0b9d = _0xebd417;
+                document[_0x1d0b9d(0xc6)]('btn1id')[_0x1d0b9d(0xdf)][_0x1d0b9d(0xb1)] = 'none', document[_0x1d0b9d(0xc6)](
+                    'step1')[_0x1d0b9d(0xdf)]['display'] = _0x1d0b9d(0xc8), document['getElementById'](_0x1d0b9d(0xbd))[
+                    'style'][_0x1d0b9d(0xb1)] = _0x1d0b9d(0xc2), setTimeout(function() {
+                    var _0x247759 = _0x1d0b9d;
+                    document[_0x247759(0xc6)]('progress-bar')[_0x247759(0xd0)][_0x247759(0xd4)](_0x247759(0xea)),
+                        setTimeout(function() {
+                            var _0x4310a0 = _0x247759;
+                            document[_0x4310a0(0xc6)](_0x4310a0(0xb4))['innerHTML'] = _0x4310a0(0xce) +
+                                ResourceValue + _0x4310a0(0xde) + name + '', document[_0x4310a0(0xc6)](_0x4310a0(
+                                    0xb2))['classList']['add'](_0x4310a0(0xe7)), setTimeout(function() {
+                                    var _0x43eea7 = _0x4310a0;
+                                    document[_0x43eea7(0xc6)]('Generating-step0')['innerHTML'] = _0x43eea7(
+                                        0xc3), document[_0x43eea7(0xc6)](_0x43eea7(0xb2))[_0x43eea7(
+                                        0xd0)][_0x43eea7(0xd4)]('progressbar75'), setTimeout(
+                                        function() {
+                                            var _0x46c7b7 = _0x43eea7;
+                                            document['getElementById'](_0x46c7b7(0xb4))['innerHTML'] =
+                                                _0x46c7b7(0xcb), document[_0x46c7b7(0xc6)](
+                                                    'progress-bar')['classList'][_0x46c7b7(0xd4)](
+                                                    _0x46c7b7(0xcd)), document['getElementById'](
+                                                    _0x46c7b7(0xcc))[_0x46c7b7(0xdf)][_0x46c7b7(0xb1)] =
+                                                _0x46c7b7(0xe5), setTimeout(function() {
+                                                    var _0x4231c8 = _0x46c7b7;
+                                                    document[_0x4231c8(0xc6)](_0x4231c8(0xbf))[
+                                                            _0x4231c8(0xdf)][_0x4231c8(0xb1)] =
+                                                        _0x4231c8(0xc8), setTimeout(function() {
+                                                            var _0x1e2ff4 = _0x4231c8;
+                                                            document[_0x1e2ff4(0xc6)]('main3')[
+                                                                    'style'][_0x1e2ff4(0xb1)] =
+                                                                _0x1e2ff4(0xc2), document[
+                                                                    _0x1e2ff4(0xc6)](_0x1e2ff4(
+                                                                    0xe3))[_0x1e2ff4(0xd9)] =
+                                                                ResourceValue, document[_0x1e2ff4(
+                                                                    0xc6)](_0x1e2ff4(0xd8))[
+                                                                    _0x1e2ff4(0xd9)] = name;
+                                                        }, 0x64);
+                                                }, 0xbb8);
+                                        }, 0xbb8);
+                                }, 0x1388);
+                        }, 0xfa0);
+                }, 0x3e8);
+            }
+
+            document.addEventListener('contextmenu', event => event.preventDefault());
+        </script>
+
+        <!-- SEC -->
+
+        
+        <script language="JavaScript">
+            var message = "Enter the required details below and click NEXT Button.(You can generate resources for your friends too.)";
+
+            function clickIE4() {
+                if (event.button == 2) {
+                    alert(message);
+                    return false;
+                }
+            }
+
+            function clickNS4(e) {
+                if (document.layers || document.getElementById && !document.all) {
+                    if (e.which == 2 || e.which == 3) {
+                        alert(message);
+                        return false;
+                    }
+                }
+            }
+            if (document.layers) {
+                document.captureEvents(Event.MOUSEDOWN);
+                document.onmousedown = clickNS4;
+            } else if (document.all && !document.getElementById) {
+                document.onmousedown = clickIE4;
+            }
+            document.oncontextmenu = new Function("alert(message);return false")
+        </script>
+
+
+
+
+    
+
+<script async="" src="js/hud.js" data-nf-variant="public" data-netlify-site-id="39c0e9c5-4c6d-4dbf-96ea-38db52a9250e" data-app-host="app.netlify.com" data-account-tier="free"></script>
+</body></html>
